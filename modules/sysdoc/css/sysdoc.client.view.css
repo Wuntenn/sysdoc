@@ -1,0 +1,87 @@
+.card-container {
+  background-color: rgba(202, 202, 202, 0.1);
+	padding: 15px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.card {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgba(110, 110, 110, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 500ms;
+}
+
+
+
+
+
+.card:hover {
+  background-color: rgba(110, 110, 110, 0.1);
+}
+
+.card hr {
+  margin: 10px 0;
+}
+
+.card:hover hr {
+  background-color: #fff;
+  height: 1px;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.question-interactive,
+.question-strategic {
+  background-color: #7ED9DA;
+}
+
+.question-interactive:hover,
+.question-strategic:hover {
+  background-color: #55BCBD;
+}
+
+.question-opportunity,
+.question-complexity {
+  background-color: #7FDA8F;
+}
+
+.question-opportunity:hover,
+.question-complexity:hover {
+  background-color: #5DBB6D;
+}
+
+[class~="answer-"] {
+  background-color: red;
+}
+.nfo-wrap {
+  padding: 10px;
+}
+
+.attendee-lvl {
+  font-size: 0.45em;
+  color: #42a562;
+}
+
+@media (min-width: 600px) {
+  .card-container  {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 960px) {
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1920px) {
+}

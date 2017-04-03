@@ -1,0 +1,70 @@
+<div>
+  <!--
+    cound have used a checkbox for 1st two answers however I want an explicit selection and not one by default
+  -->
+  <form class="card-container">
+    <section class="card question-interactive">
+      <h2>Does the solution involve end user interaction?</h2>
+      <div class="answer-interactive btn-group">
+        <label class="btn btn-primary" ng-model="vm.answer.isInteractive" uib-btn-radio="true">Yes</label>
+        <label class="btn btn-primary" ng-model="vm.answer.isInteractive" uib-btn-radio="false">No</label>
+      </div>
+    </section>
+    <section class="card question-strategic">
+      <h2>Is the opportunity strategic?</h2>
+      <div class="answer-strategic btn-group">
+        <label class="btn btn-primary" ng-model="vm.answer.isStrategic" uib-btn-radio="true">Yes</label>
+        <label class="btn btn-primary" ng-model="vm.answer.isStrategic" uib-btn-radio="false">No</label>
+      </div>
+    </section>
+    <section class="card question-opportunity">
+      <h2>What is the value of the opportunity?</h2>
+      <div class="answer-opportunity btn-group">
+        <label class="btn btn-primary" ng-model="vm.answer.opportunityValue" uib-btn-radio="'high'">High</label>
+        <label class="btn btn-primary" ng-model="vm.answer.opportunityValue" uib-btn-radio="'medium'">Medium</label>
+        <label class="btn btn-primary" ng-model="vm.answer.opportunityValue" uib-btn-radio="'low'">Low</label>
+      </div>
+    </section>
+    <section class="card question-complexity">
+      <h2>What is the complexity of the opportunity?</h2>
+      <div class="answer-complexity btn-group">
+        <label class="btn btn-primary" ng-model="vm.answer.opportunityComplexity" uib-btn-radio="'high'">High</label>
+        <label class="btn btn-primary" ng-model="vm.answer.opportunityComplexity" uib-btn-radio="'medium'">Medium</label>
+        <label class="btn btn-primary" ng-model="vm.answer.opportunityComplexity" uib-btn-radio="'low'">Low</label>
+      </div>
+    </section>
+  </form>
+  <section ng-show="vm.attendees">
+    <h2>Attendees</h2>
+    <div class="card-container attendees">
+      <div class="card tech" ng-show="vm.attendees.tech">
+        <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
+        <span class="attendee-dept">Tech</span><br>
+        <span class="attendee-lvl">Level: {{ vm.attendees.tech.displayName }}</span>
+        <div ng-repeat="employee in vm.attendees.tech.staff">
+          <span><small>{{employee}}</small></span><br>
+        </div>
+      </div> 
+      <div class="card brand" ng-show="vm.attendees.brand">
+        <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+        <span class="attendee-dept">Brand</span><br>
+        <span class="attendee-lvl">Level: {{ vm.attendees.brand.displayName }}</span>
+        <div ng-repeat="employee in vm.attendees.brand.staff">
+          <span><small>{{employee}}</small></span><br>
+        </div>
+      </div> 
+    </div>
+  </section>
+
+  <!-- test mode
+  <pre>Values: {{ vm.answer }}</pre>
+  <pre>Tech: {{ vm.attendees.tech }}</pre>
+  <pre>Brand: {{ vm.attendees.brand }}</pre>
+
+  <pre>{{ vm.tmpCount}}</pre>
+  -->
+
+
+</div>
+
+
